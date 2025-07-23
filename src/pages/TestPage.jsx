@@ -98,7 +98,8 @@ export default function TestPage() {
 
     // Simulate API call
     setTimeout(() => {
-      window.location.href = "/result";
+    // window.location.href = "/result";
+    navigate('/result')
     }, 2000);
   };
 

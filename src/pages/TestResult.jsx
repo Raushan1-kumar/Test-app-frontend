@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function TestResult() {
+  const navigate= useNavigate();
   const [showCelebration, setShowCelebration] = useState(true);
   const [currentTab, setCurrentTab] = useState("overview");
 
@@ -145,7 +147,7 @@ function TestResult() {
         <div className="px-4 py-4">
           <div className="flex items-center justify-between">
             <button
-              onClick={() => (window.location.href = "/student")}
+              onClick={() => (navigate('/student'))}
               className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -160,7 +162,7 @@ function TestResult() {
             </div>
 
             <button
-              onClick={() => (window.location.href = "/student")}
+              onClick={() => {navigate('/student')}}
               className="px-3 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/30 text-sm"
             >
               Dashboard
@@ -683,7 +685,7 @@ function TestResult() {
         {/* Action Buttons */}
         <div className="mt-8 space-y-3">
           <button
-            onClick={() => (window.location.href = "/test")}
+            onClick={() => {navigate('/student')}}
             className="w-full py-4 bg-[#78C841] text-white rounded-xl hover:bg-[#6bb838] transition-colors font-semibold text-lg shadow-lg"
           >
             <div className="flex items-center justify-center space-x-2">
@@ -695,7 +697,7 @@ function TestResult() {
           </button>
 
           <button
-            onClick={() => (window.location.href = "/student")}
+            onClick={() =>{navigate('/student')}}
             className="w-full py-4 bg-white/20 text-white rounded-xl hover:bg-white/30 transition-colors font-semibold text-lg backdrop-blur-sm border border-white/30"
           >
             <div className="flex items-center justify-center space-x-2">

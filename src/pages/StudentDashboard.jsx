@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function StudentDashboard() {
+  const navigate = useNavigate();
 //   const { data: user, loading } = useUser();
 //   const { signOut } = useAuth();
 
@@ -310,7 +312,7 @@ export default function StudentDashboard() {
                   <button
                     className="w-full py-3 rounded-lg font-medium text-white transition-colors"
                     style={{ backgroundColor: test.color }}
-                    onClick={() => (window.location.href = `/test`)}
+                    onClick={() => {navigate('/test')}}
                   >
                     Start Test
                   </button>
@@ -364,9 +366,9 @@ export default function StudentDashboard() {
                   </div>
                   <button
                     className="w-full py-2 bg-[#78C841] text-white rounded-lg hover:bg-[#6bb838] transition-colors text-sm"
-                    onClick={() =>
-                      (window.location.href = `/result/${attempt.id}`)
-                    }
+                    // onClick={() =>
+                    //   // (window.location.href = `/result/${attempt.id}`)
+                    // }
                   >
                     View Details
                   </button>
@@ -382,7 +384,7 @@ export default function StudentDashboard() {
           <div className="grid grid-cols-2 gap-3">
             <button
               className="flex flex-col items-center space-y-2 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
-              onClick={() => (window.location.href = "/progress")}
+              // onClick={() => (window.location.href = "/progress")}
             >
               <svg
                 className="w-6 h-6 text-white"
@@ -398,7 +400,7 @@ export default function StudentDashboard() {
 
             <button
               className="flex flex-col items-center space-y-2 p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
-              onClick={() => (window.location.href = "/profile")}
+              // onClick={() => (window.location.href = "/profile")}
             >
               <svg
                 className="w-6 h-6 text-white"
